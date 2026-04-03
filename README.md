@@ -1,10 +1,10 @@
 # 🏃‍♀️ Chidoo Fitness Trends
 
-> *My personal health & fitness journey — from raw iPhone data to a fully interactive dashboard.*
+> *My personal fitness & weight loss journey — from raw iPhone data to a fully interactive dashboard.*
 
-I built this project for myself. No tutorials, no sample datasets, no fake numbers — just my real Apple Health data going back to **2020**, turned into something I can actually learn from and be proud of.
+I built this project for myself. No tutorials, no sample datasets, no fake numbers — just my real Apple Health data, turned into something I can actually learn from and be proud of.
 
-This is part of my data analytics portfolio, but more than that, it's a window into my personal fitness and weight loss journey. Every step, every workout, every resting heart rate reading in here is mine.
+This is part of my data analytics portfolio, but more than that, it's a window into a very personal journey. Every step, every workout, every resting heart rate reading in here is mine.
 
 ---
 
@@ -45,11 +45,17 @@ A single-file HTML dashboard that runs directly in your browser — no server, n
 
 ## 💡 The Story Behind It
 
-I started tracking my health seriously through the **Apple Health app on my iPhone** — steps, workouts, heart rate, everything. After a while I had years of data sitting there but no good way to actually *see* it or understand my progress.
+If you look at my data from **2020 to 2023**, it's pretty telling — barely any movement, low step counts, no real consistency. Life was happening, but my body wasn't exactly moving with it.
 
-As someone transitioning into data analytics, I decided to build my own solution. I wrote a **Python data pipeline** that converts the raw Apple Health export into clean, structured JSON, then built a **fully interactive web dashboard** around it.
+**2024 is where everything changed.** That's when I actually started taking my health seriously — getting into workouts, hitting step goals, paying attention to what I was eating. The numbers started climbing and for the first time, I had something worth tracking.
 
-No third-party fitness apps. No subscriptions. Just my data, my way.
+I've always been someone who *loves* looking at numbers and spotting trends. Give me a spreadsheet or a chart and I'm genuinely excited. So when I realised I had years of health data sitting in my iPhone going completely unseen, I knew exactly what I wanted to do with it.
+
+I wrote a **Python data pipeline** that pulls raw Apple Health exports (the huge XML files your phone generates) and converts them into clean, structured data. Then I built a **fully interactive web dashboard** around it — so I could actually *see* my progress, compare periods, spot patterns, and understand where I'm heading.
+
+What started as a personal project quickly became one of the most exciting things I've built. There's something different about analysing data that's literally about *you* — every spike in that steps chart is a day I remember, every workout dot is a session I showed up for.
+
+No third-party apps. No subscriptions. Just my data, visualised my way.
 
 ---
 
@@ -156,4 +162,4 @@ I'm **Chido Tembo** — an Informatics graduate and aspiring data analyst based 
 
 ---
 
-*Built with curiosity, Python, and a lot of daily steps.* 🦶
+*Built with curiosity, Python, and a lot of steps I didn't used to take.* 🦶
