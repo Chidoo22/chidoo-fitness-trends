@@ -1,0 +1,25 @@
+# Environment / secrets
+.env
+*.env
+
+# Personal health data (keep off GitHub)
+fitness_data.json
+weight_model_data.json
+export.zip
+export.xml
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Mac junk
+.DS_Store
+__MACOSX/
+
+# Windows junk
+Thumbs.db
+desktop.ini
+
+# Node
+node_modules/

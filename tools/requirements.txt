@@ -1,0 +1,6 @@
+pandas
+plotly
+kaleido
+openpyxl
+requests
+python-dotenv

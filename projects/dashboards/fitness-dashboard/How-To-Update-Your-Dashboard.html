@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How To Keep Your Fitness Dashboard Fresh — A Simple Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+@page{size:A4;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,sans-serif;background:#0a0a14;color:#eee;line-height:1.6;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+
+/* Page container */
+.page{max-width:800px;margin:0 auto;padding:48px 40px;min-height:100vh}
+
+/* Cover */
+.cover{text-align:center;padding:60px 20px 40px;margin-bottom:40px;background:linear-gradient(135deg,rgba(244,114,182,0.12),rgba(244,63,94,0.08));border:1px solid rgba(244,114,182,0.15);border-radius:24px}
+.cover h1{font-size:2.2rem;font-weight:900;background:linear-gradient(135deg,#f9a8d4,#f472b6,#fb7185,#f43f5e);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:12px;line-height:1.2}
+.cover .subtitle{font-size:1rem;color:#9090aa;margin-bottom:20px}
+.cover .for{font-size:0.85rem;color:#f472b6;font-weight:600;padding:8px 20px;display:inline-block;border:1px solid rgba(244,114,182,0.3);border-radius:12px;background:rgba(244,114,182,0.08)}
+.cover .freq{margin-top:20px;font-size:0.9rem;color:#8888a0}
+.cover .freq b{color:#10b981}
+
+/* Section */
+.section{margin-bottom:36px}
+.section-title{font-size:1.3rem;font-weight:800;margin-bottom:16px;display:flex;align-items:center;gap:10px;color:#f0f0f5}
+.section-title .num{width:32px;height:32px;border-radius:10px;background:linear-gradient(135deg,#f472b6,#f43f5e);color:white;font-size:0.85rem;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+
+/* Step cards */
+.step{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:18px;padding:24px;margin-bottom:16px;display:flex;gap:20px;align-items:flex-start}
+.step-num{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#f472b6,#f43f5e);color:white;font-size:1.1rem;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 4px 12px rgba(244,114,182,0.3)}
+.step-content{flex:1}
+.step-content h3{font-size:1rem;font-weight:700;margin-bottom:6px;color:#f0f0f5}
+.step-content p{font-size:0.88rem;color:#9090aa;line-height:1.6}
+.step-content .highlight{background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.2);border-radius:8px;padding:8px 14px;margin-top:8px;font-size:0.82rem;color:#10b981;font-weight:500}
+.step-content .warning{background:rgba(249,115,22,0.1);border:1px solid rgba(249,115,22,0.2);border-radius:8px;padding:8px 14px;margin-top:8px;font-size:0.82rem;color:#f97316;font-weight:500}
+
+/* Visual path */
+.visual-icon{font-size:2.4rem;text-align:center;margin-bottom:8px}
+
+/* Info box */
+.info-box{background:rgba(6,182,212,0.08);border:1px solid rgba(6,182,212,0.15);border-radius:16px;padding:20px 24px;margin-bottom:24px}
+.info-box h4{font-size:0.9rem;font-weight:700;color:#06b6d4;margin-bottom:8px}
+.info-box p{font-size:0.85rem;color:#9090aa;line-height:1.6}
+.info-box ul{list-style:none;padding:0;margin-top:8px}
+.info-box li{font-size:0.85rem;color:#9090aa;padding:4px 0;display:flex;align-items:flex-start;gap:8px}
+.info-box li::before{content:"";display:none}
+.check{color:#10b981;font-weight:700;flex-shrink:0}
+
+/* FAQ */
+.faq{margin-bottom:16px}
+.faq-q{font-size:0.92rem;font-weight:700;color:#f472b6;margin-bottom:4px}
+.faq-a{font-size:0.85rem;color:#9090aa;line-height:1.6;padding-left:16px;border-left:2px solid rgba(244,114,182,0.2)}
+
+/* Flow diagram */
+.flow{display:flex;align-items:center;justify-content:center;gap:12px;margin:24px 0;flex-wrap:wrap}
+.flow-item{text-align:center;padding:14px 18px;border-radius:14px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);min-width:100px}
+.flow-item .fi-icon{font-size:1.8rem;margin-bottom:4px}
+.flow-item .fi-text{font-size:0.72rem;font-weight:600;color:#9090aa}
+.flow-arrow{font-size:1.4rem;color:#f472b6}
+
+/* Schedule */
+.schedule{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0}
+.sched-card{padding:16px 18px;border-radius:14px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);text-align:center}
+.sched-card .sc-icon{font-size:1.6rem;margin-bottom:6px}
+.sched-card .sc-label{font-size:0.78rem;font-weight:700;color:#f0f0f5;margin-bottom:2px}
+.sched-card .sc-desc{font-size:0.72rem;color:#8888a0}
+.sched-card.recommended{border-color:rgba(16,185,129,0.3);background:rgba(16,185,129,0.06)}
+.sched-card.recommended .sc-label{color:#10b981}
+
+/* Footer */
+.footer{text-align:center;padding:24px;color:#55556a;font-size:0.75rem;border-top:1px solid rgba(255,255,255,0.06);margin-top:32px}
+
+/* Print styles */
+@media print{
+  body{background:white;color:#1a1a2e}
+  .page{padding:24px 20px}
+  .cover{background:rgba(244,114,182,0.05);border-color:rgba(244,114,182,0.1)}
+  .step{background:rgba(0,0,0,0.02);border-color:rgba(0,0,0,0.08)}
+  .step-content p,.info-box p,.info-box li,.faq-a,.sched-card .sc-desc{color:#555}
+  .section-title{color:#1a1a2e}
+  .step-content h3{color:#1a1a2e}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- COVER -->
+  <div class="cover">
+    <h1>How To Keep Your<br>Fitness Dashboard Fresh</h1>
+    <p class="subtitle">A simple guide to updating your dashboard with new health data</p>
+    <div class="for">Made for Chido &#128150;</div>
+    <p class="freq">Recommended: update <b>every 2 weeks</b> or <b>once a month</b></p>
+  </div>
+
+  <!-- WHAT IS THIS -->
+  <div class="info-box">
+    <h4>&#128161; What is this guide about?</h4>
+    <p>Your fitness dashboard shows your health data (steps, heart rate, calories, workouts, weight). But that data gets old! This guide shows you how to refresh it with new data from your iPhone. It takes about <b>2 minutes</b> and you only need to do it every 2-4 weeks.</p>
+  </div>
+
+  <!-- THE FLOW -->
+  <div class="section">
+    <div class="section-title">The Process at a Glance</div>
+    <div class="flow">
+      <div class="flow-item"><div class="fi-icon">&#128241;</div><div class="fi-text">Export from<br>iPhone</div></div>
+      <div class="flow-arrow">&#10132;</div>
+      <div class="flow-item"><div class="fi-icon">&#128230;</div><div class="fi-text">Get the<br>ZIP file</div></div>
+      <div class="flow-arrow">&#10132;</div>
+      <div class="flow-item"><div class="fi-icon">&#128187;</div><div class="fi-text">Open<br>Dashboard</div></div>
+      <div class="flow-arrow">&#10132;</div>
+      <div class="flow-item"><div class="fi-icon">&#128228;</div><div class="fi-text">Upload<br>the file</div></div>
+      <div class="flow-arrow">&#10132;</div>
+      <div class="flow-item"><div class="fi-icon">&#10024;</div><div class="fi-text">Dashboard<br>updates!</div></div>
+    </div>
+  </div>
+
+  <!-- PART 1: EXPORT FROM IPHONE -->
+  <div class="section">
+    <div class="section-title"><span class="num">A</span> Export Data from Your iPhone</div>
+
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <h3>&#128241; Open the Health App</h3>
+        <p>Find the <b>Health</b> app on your iPhone. It has a white icon with a red/pink heart. Tap it to open.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <h3>&#128100; Tap Your Profile Picture</h3>
+        <p>In the top-right corner of the Health app, you'll see your <b>profile picture</b> (or your initials in a circle). Tap on it.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <h3>&#128229; Tap "Export All Health Data"</h3>
+        <p>Scroll down on the profile page. Near the bottom, you'll see a button that says <b>"Export All Health Data"</b>. Tap it.</p>
+        <div class="highlight">&#128161; A popup will ask "Are you sure?" &#8212; Tap <b>"Export"</b> to confirm.</div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-content">
+        <h3>&#9203; Wait for the Export</h3>
+        <p>Your iPhone will now prepare all your health data. This can take <b>1-5 minutes</b> depending on how much data you have. You'll see a progress spinner. Just wait &#8212; don't close the app.</p>
+        <div class="warning">&#9888;&#65039; The file can be large (100MB-500MB+). Make sure you have storage space on your phone.</div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">5</div>
+      <div class="step-content">
+        <h3>&#128228; Send the File to Your Computer</h3>
+        <p>When the export is done, a <b>share sheet</b> appears. You have several options:</p>
+        <p style="margin-top:8px"><b>Option A (Easiest):</b> Tap <b>"Save to Files"</b> &#8594; choose <b>iCloud Drive</b>. Then open iCloud Drive on your Mac/PC to find it.</p>
+        <p style="margin-top:6px"><b>Option B:</b> Tap <b>AirDrop</b> and send it directly to your Mac (if nearby).</p>
+        <p style="margin-top:6px"><b>Option C:</b> Email it to yourself (only if file is small enough).</p>
+        <div class="highlight">&#128193; The file is called <b>"export.zip"</b>. Save it somewhere you can find it later (like Desktop or Downloads).</div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">6</div>
+      <div class="step-content">
+        <h3>&#128194; Unzip the File (Optional)</h3>
+        <p>On your computer, <b>double-click</b> the <b>export.zip</b> file to unzip it. Inside you'll find a file called <b>export.xml</b> &#8212; that's the important one. But you can also upload the ZIP directly to the dashboard &#8212; it will extract it for you.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- PART 2: UPLOAD TO DASHBOARD -->
+  <div class="section">
+    <div class="section-title"><span class="num">B</span> Upload to Your Dashboard</div>
+
+    <div class="step">
+      <div class="step-num">7</div>
+      <div class="step-content">
+        <h3>&#127760; Open Your Fitness Dashboard</h3>
+        <p>Open the <b>fitness_dashboard.html</b> file in your web browser (Safari, Chrome, etc.). Just double-click the file on your computer.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">8</div>
+      <div class="step-content">
+        <h3>&#128228; Click the "Import Data" Button</h3>
+        <p>In the dashboard, look for the <b>"Import Data"</b> button &#8212; it's in the top area near the filters, or in the nav bar. Click it.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">9</div>
+      <div class="step-content">
+        <h3>&#128193; Select Your Export File</h3>
+        <p>A file picker will open. Navigate to where you saved the file and select either:</p>
+        <p style="margin-top:6px">&#8226; <b>export.zip</b> (the ZIP file directly), OR</p>
+        <p>&#8226; <b>export.xml</b> (the unzipped XML file)</p>
+        <p style="margin-top:6px">Click <b>"Open"</b> or <b>"Choose"</b>.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">10</div>
+      <div class="step-content">
+        <h3>&#9203; Wait for Processing</h3>
+        <p>The dashboard will read and process your health data. This may take <b>10-60 seconds</b> depending on file size. You'll see a progress indicator.</p>
+        <div class="highlight">&#10024; <b>Done!</b> All your charts, KPIs, badges, and predictions will update with your latest data. The dashboard saves this data locally, so next time you open it, your data is still there.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HOW OFTEN -->
+  <div class="section">
+    <div class="section-title"><span class="num">C</span> How Often Should You Update?</div>
+    <div class="schedule">
+      <div class="sched-card">
+        <div class="sc-icon">&#128197;</div>
+        <div class="sc-label">Weekly</div>
+        <div class="sc-desc">Best for tracking short-term progress like a weight loss plan</div>
+      </div>
+      <div class="sched-card recommended">
+        <div class="sc-icon">&#11088;</div>
+        <div class="sc-label">Every 2 Weeks &#10004;</div>
+        <div class="sc-desc">Recommended! Good balance of fresh data without being tedious</div>
+      </div>
+      <div class="sched-card">
+        <div class="sc-icon">&#128198;</div>
+        <div class="sc-label">Monthly</div>
+        <div class="sc-desc">Good for general health monitoring and long-term trends</div>
+      </div>
+      <div class="sched-card">
+        <div class="sc-icon">&#128203;</div>
+        <div class="sc-label">Quarterly</div>
+        <div class="sc-desc">Minimum to keep the dashboard useful for trend analysis</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHAT DATA -->
+  <div class="section">
+    <div class="info-box">
+      <h4>&#128202; What Data Gets Imported?</h4>
+      <ul>
+        <li><span class="check">&#10003;</span> <b>Steps</b> &#8212; Daily step count from iPhone + Apple Watch</li>
+        <li><span class="check">&#10003;</span> <b>Heart Rate</b> &#8212; Resting HR from Apple Watch or Oura Ring</li>
+        <li><span class="check">&#10003;</span> <b>Calories</b> &#8212; Active energy burned daily</li>
+        <li><span class="check">&#10003;</span> <b>Workouts</b> &#8212; Type, duration, and date of each session</li>
+        <li><span class="check">&#10003;</span> <b>Weight</b> &#8212; Body weight (if you log it or have a smart scale)</li>
+        <li><span class="check">&#10003;</span> <b>VO2 Max</b> &#8212; Cardiorespiratory fitness estimates</li>
+        <li><span class="check">&#10003;</span> <b>HRV</b> &#8212; Heart rate variability (if tracked by Apple Watch)</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="section">
+    <div class="section-title"><span class="num">?</span> Common Questions</div>
+
+    <div class="faq">
+      <div class="faq-q">Is my health data safe?</div>
+      <div class="faq-a">Yes! Your data never leaves your computer. The dashboard processes everything locally in your browser. Nothing is sent to any server or cloud service.</div>
+    </div>
+
+    <div class="faq">
+      <div class="faq-q">Will I lose my old data when I import new data?</div>
+      <div class="faq-a">No. Each import includes ALL your Apple Health history. So new imports automatically include old + new data combined.</div>
+    </div>
+
+    <div class="faq">
+      <div class="faq-q">What if the file is too large?</div>
+      <div class="faq-a">If you have years of data, the XML file can be 500MB+. The dashboard handles this by processing it in chunks. It may take a minute, but it will work. If it's very slow, try using Chrome instead of Safari.</div>
+    </div>
+
+    <div class="faq">
+      <div class="faq-q">Can I use this on my phone?</div>
+      <div class="faq-a">The dashboard works on phone browsers, but importing large XML files works better on a computer. You can export on your phone and upload on your computer.</div>
+    </div>
+
+    <div class="faq">
+      <div class="faq-q">What if I don't have an Apple Watch?</div>
+      <div class="faq-a">That's fine! Your iPhone alone tracks steps, flights climbed, and distance. Heart rate and HRV require a wearable (Apple Watch, Oura Ring, etc.), but the dashboard will simply show "No data" for those metrics.</div>
+    </div>
+  </div>
+
+  <!-- QUICK REFERENCE -->
+  <div class="info-box" style="border-color:rgba(244,114,182,0.2);background:rgba(244,114,182,0.05)">
+    <h4 style="color:#f472b6">&#128203; Quick Reference (Stick This on Your Fridge!)</h4>
+    <p style="font-size:0.9rem;line-height:1.8;color:#bbb">
+      <b>Every 2 weeks:</b><br>
+      1. iPhone &#8594; Health app &#8594; Profile &#8594; Export All Health Data<br>
+      2. Save export.zip to computer (AirDrop or iCloud)<br>
+      3. Open fitness_dashboard.html &#8594; Import Data &#8594; Select file<br>
+      4. Wait 30 seconds &#8594; Done! &#10024;
+    </p>
+  </div>
+
+  <div class="footer">
+    Chido's Fitness Dashboard &middot; Guide v1.0 &middot; 2026<br>
+    To save this as PDF: File &#8594; Print &#8594; "Save as PDF"
+  </div>
+
+</div>
+</body>
+</html>
