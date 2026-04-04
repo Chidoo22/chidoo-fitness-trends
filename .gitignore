@@ -2,11 +2,22 @@
 .env
 *.env
 
+# AI tooling (private)
+.claude/
+CLAUDE.md
+
+# IDE settings
+.vscode/
+
 # Personal health data (keep off GitHub)
 fitness_data.json
 weight_model_data.json
+weight_model_decoded.json
 export.zip
 export.xml
+
+# SQL practice (unrelated to this project)
+projects/sql-practice/
 
 # Python
 __pycache__/
